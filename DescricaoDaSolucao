@@ -9,3 +9,7 @@ Também foi criado um método chamado "buscarAntepassado", que recebe o nível d
 O método utiliza um laço for, que, a cada iteração, alcança o antepassado do objeto da pessoa atual por meio da operação "pessoa.getPai()". 
 O laço realiza a iteração até alcançar o nível desejado, e, então, retornando a pessoa encontrada para aquele nível da linhagem. 
 Para evitar erros, foi criada uma verificação de "if (pessoa.getPai() == null)" dentro do laço, e, caso a expressão seja verdadeira, o método retorna o valor null, já que a linhagem acabou antes de atingir o nível solicitado.
+
+Observação: o vídeo com a gravação da execução não pôde ser anexado diretamente pelo formulário de 
+envio devido ao limite de tamanho de arquivo do site. Por esse motivo, está disponibilizado através 
+de um link para o Google Drive, referenciado no README do repositório.
