@@ -2,3 +2,15 @@ Este é um repositorio com a solução implementada para o desafio tecnico da Gu
 
 Aqui, o vídeo em que implemento a solução:
 https://drive.google.com/file/d/1bMTA7hsX2SqLcWZcD0tXAATD74muTb4T/view?usp=sharing
+
+A solução foi implementada da seguinte maneira:
+
+Foi criada uma classe Pessoa, com os atributos "nome" e "pai", com o atributo pai sendo uma referência para outro objeto do tipo Pessoa, no contexto do problema, o antecessor do objeto atual.
+No código principal, na massa de testes, foram criadas cinco gerações, indo do tataravô até o filho. As gerações são organizadas em níveis: nível 0 = filho, nível 1 = pai, nível 2 = avô, nível 3 = bisavô, nível 4 = tataravô. 
+Cada objeto foi criado recebendo o objeto anterior como o atributo pai, com exceção do tataravô, já que, sendo o último da linhagem, recebeu null.
+Foi criado um método chamado de "validarEntradas", que recebe o nível que se deseja alcançar na linhagem e a pessoa que será usada como base para começar a busca. 
+Esse método verifica se o nível não é menor do que zero ou se o objeto pessoa passado como parâmetro não é nulo. Caso uma dessas condições sejam falsas, o método lança uma IllegalArgumentException.
+Também foi criado um método chamado "buscarAntepassado", que recebe o nível desejado e a pessoa que será usada como partida para percorrer a linhagem. 
+O método utiliza um laço for, que, a cada iteração, alcança o antepassado do objeto da pessoa atual por meio da operação "pessoa.getPai()". 
+O laço realiza a iteração até alcançar o nível desejado, e, então, retornando a pessoa encontrada para aquele nível da linhagem. 
+Para evitar erros, foi criada uma verificação de "if (pessoa.getPai() == null)" dentro do laço, e, caso a expressão seja verdadeira, o método retorna o valor null, já que a linhagem acabou antes de atingir o nível solicitado.
